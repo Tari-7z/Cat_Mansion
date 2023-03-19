@@ -1,51 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --morado: #764fee;
+    --fondo: #896ad4;
+
+    /** Fonts **/
+    --poppins: 'Poppins', sans-serif;
+
+    --font-small: 0.877rem;
+    --font-medium: 1rem;
+    --font-big: 1.6rem;
+
+    --icon: 4rem;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    /** Fonts **/
 }
 
-:root {
-    --morado: #764fee;
-    --fondo: #bca4f6;
-
-    --poppins: 'Poppins', sans-serif;
-}
 
 body {
     background-color: var(--fondo);
-    background-color: #8669e0;
     background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.39'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 
 .container {
-    margin: 0 2%;
+    width:98%;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
-/** Navegacion  **/
 
+/** Navegacion  **/
 .header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    font-family: var(--poppins);
-    height: 48px;    
+    
+    width: 100%;
+    height: 64px;
     margin-top: 10px;
-    padding-right: 20px;
     border-radius: 10px 10px 0 0;
-    background-color: var(--morado);
-    background: linear-gradient(188deg, #744cec, #442c77);
-    background-size: 400% 400%;
-    min-width: 576px;
 
-    -webkit-animation: header__nav 6s ease infinite;
-    -moz-animation: header__nav 6s ease infinite;
-    animation: header__nav 6s ease infinite;
+    font-family: var(--poppins);
+    font-size: var(--font-medium);
+
+    background: var(--morado);
+    border-bottom: 1px white solid;
+
+    overflow: hidden;
 }
 
 .header__nav .header__link {
@@ -54,7 +60,7 @@ body {
 
 .header__logo,
 .header__logo .header__link,
-.header__img {
+.header__logo .header__img {
     display: flex;
     align-items: center;
     height: 100%;
@@ -63,10 +69,9 @@ body {
 
 
 .header__logo .header__title {
-    font-size: 22px;
+    font-size: var(--font-big);
     padding-left: 10px;
 }
-
 
 .header__list {
     display: flex;
@@ -74,139 +79,248 @@ body {
     list-style: none;
 }
 
+.header__item-mobile {
+    display: none;
+}
+
 .header__item .header__link {
     display: block;
     margin: 0 10px;
     padding: 100% 4px;
+    font-family: var(--font-small);
     font-weight: 500;
     text-decoration: none;
 }
 
-.premiun {
+.header__link-gold {
     background-color: #f7ca18;
 }
-
 
 .header__item .header__link:hover {
     background-color: #442c77;
     opacity: .9;
 }
 
-.header__item .premiun:hover {
+.header__item .header__link-gold:hover {
     background-color: #f7ca18;
     opacity: .95;
 }
 
 
-/** mini nav **/
-.header__miniNav {
+/** Lower Third **/
+.header__lowerThird {
     background-color: var(--morado);
-    padding: 2px 0;
-    text-align: end;
+    text-align: center;
+    
     font-family:var(--poppins);
+    font-size: var(--font-small);
+    
     border-radius: 0 0 10px 10px;
     color: #fff;
     overflow: hidden;
-    min-width: 576px;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin-bottom: 60px;
 }
 
-.header__miniNav .header__title {
-    animation: move 10s linear infinite;
+.header__lowerThird .header__title {
+    animation: move 8s linear infinite;
 }
 
-.header__banner,
-.backround {
+
+/** Encabezado **/
+
+.header__banner {
     display: flex;
-    flex-direction: column;
-    background: url('../recursos/opalo.jpg');
-    width: 98%;
+    width: 100%;
     height: 400px;
-    margin: 40px auto; 
-    color: #fff; 
-    align-items: center;
-    justify-content: end;
-    text-align: center;
-    padding-bottom: 20px;
-    font-family: var(--poppins);
-    border-radius: 5px;
-    min-width: 576px;
+
+    margin-bottom: 80px;
+    padding-bottom: 60px;
+    
+    align-items: end;    
+
+    background: url(../recursos/estacion.jpg) center;
+    border-radius: 10px;    
 }
 
 .header__banner .background {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgba(120, 37, 159, 0.4);
-    border-radius: 5px;
+    justify-content: center;
+
+    width: 100%;
+    height: 200px;
+
+
+    font-family: var(--poppins);
+    background-color:rgba(120, 37, 159, 0.35);
 }
 
-.header__paragraph {
-    width: 600px;
+.header__banner .header__title {
+    color: #fff;
+
+    font-size: var(--font-big);
+    font-weight: 700;
+}
+
+.header__banner .header__paragraph {
+    color: #fff;
+    width: 70%;
+
+    text-align: center;
+    font-size: var(--font-medium);
+    font-weight: 300;
+    letter-spacing: 1.2px;
+
+    margin-bottom: 5px;
+}
+
+.header__banner .header__paragraph-gold {
+    color: #f7ca18;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .cta-banner {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     text-decoration: none;
-    color: #fff;
-    background-color: #7289DA;
+
     width: 120px;
-    height: 40px;    
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 40px;
     border-radius: 30px;
 
+    color: #fff;
+    background-color: #7289DA;
+}
+
+.cta-banner:hover {
+    opacity: .9;
+}
+
+/** characteristics **/
+
+.characteristics {
+    text-align: center;
+    justify-content: center;
+
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px 0;
+    margin-bottom: 50px;
+    border-radius: 30px;
+
+
+    background-color: #442c77;
+    color: #fff;
+
+    font-family: var(--poppins);
+    font-size: var(--font-big);
+}
+
+.section_characteristics {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--morado);
+    
+    margin-bottom: 80px;
+    padding: 30px 0;
+    border-radius: 10px;
+}
+
+.section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--morado);
+    width: 180px;
+    height: 200px;
+
+    border-radius: 30px;
+    border: 3px solid #fff;
+
+}
+
+.section__card:hover {
+    transform: scale(1.06);
+}
+
+.section__card .section__title {
+    font-size: var(--font-big);
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.bx {
+    color: #fff;
+    font-size: var(--icon);
 }
 
 
 /** Section **/
+
 .section {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+
+    width: 100%;
+    margin-bottom: 100px;
+    overflow: hidden;
+
     color: #fff;
     font-family: var(--poppins);
+
 }
+
 
 .section__left {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 65%;
+
+    width: 60%;
+
     background-color: var(--morado);
     border-radius: 10px;
 }
 
 .section__left .section__img {
     width: 50%;
+    margin-bottom: 20px;
 }
 
 .section__left .section__list {
-    list-style: none;
-    text-align: center;
+    align-items: center;
+    list-style: circle;
 }
+
 
 
 
 /** cards **/
 
-
-.cards {
+.card__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+
     margin-bottom: 100px;
-}
+    padding: 20px 0;
 
-.cards__title {
-    text-align: center;
-    font-family: var(--poppins);
-    color: #fff;
-}
+    background-color: var(--morado);
 
-hr {
-    margin: 20px 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .card {
@@ -219,11 +333,12 @@ hr {
     font-family: var(--poppins);
     text-align: center;
     margin: 0 30px;
-    padding: 10px;
     border-radius: 10px;
+    border: 3px solid #fff;
 }
 
 .card__photo {
+    padding: 10px;
     width:90%;
 }
 
@@ -233,77 +348,205 @@ hr {
 }
 
 
+/** footer **/
 
-/** Responsive Desing **/
+.footer {
+    display: flex;
+    justify-content: center;
 
-@media (min-width: 576px) {
+    width: 100%;
+    background-color: var(--morado);
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
 
-    .header__banner,
-    .backround {
-        height: 300px;
-        justify-content: center;
+.footer .footer__title {
+    font-size: var(--font-big);
+    padding: 5px;
+    color: #fff;
+}
+
+
+
+
+
+@media (min-width: 350px) {
+    :root {
+
+        /** font **/
+
+        --font-small: 0.877rem;
+        --font-medium: .866rem;
+        --font-big: 1.3rem;
+
+        --icon: 3rem;
     }
-    
+
+    /** Navegacion **/
+
+    .header__logo .header__title {
+        display: none;
+    }
+
+    .header__item {
+        display: none;
+    }
+
+    .header__item-mobile {
+        display: block;
+        padding-right: 10px;
+    }
+
+    .header__item-mobile .bx {
+        font-size: var(--icon);
+    }
+
+    .header__lowerThird .header__title {
+        animation: move 6s linear infinite
+    }
+
+    /** Banner **/
+
+    .header__banner {
+        height: 350px;
+        margin-bottom: 60px;
+    }
+
     .header__banner .background {
-        width: 100%;
-        overflow: hidden;
+        height: 250px;
+
     }
 
-    .header__paragraph {
-        width: 500px;
+    .header__banner .header__title {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 5px;
+
     }
+
+    /** Caracteristicas **/
+
+    .section_characteristics {
+        display: flex;
+        flex-direction: column;
+        
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 60%;
+    }
+
+    .section_characteristics .section__card {
+        margin-bottom: 20px;
+        
+        width: 160px;
+        height: 160px;
+    }
+
+
+    /** section **/
 
     .section {
         flex-direction: column;
-        align-items: center;
     }
 
     .section__left {
+        width: 100%;
+        height: 300px;
         margin-bottom: 40px;
     }
 
-    .cards {
-        flex-direction: column;
-        align-items: center;
+    .section__right {
+        display: flex;
+        justify-content: center;
     }
 
-    .card {
-        margin-bottom: 20px;
-        width: 250px;
+    .card__list {
+        display: none;
+    }
+
+
+}
+
+@media (min-width: 435px) {
+    .header__logo .header__title {
+        display: block;
     }
 }
 
-@media(min-width: 768px) {
-        .header__banner {
-            height: 400px;
-        }
+@media (min-width: 680px) {
+    .header__logo .header__title {
+        display: block;
+    }
 
-        .header__banner, 
-        .background {
-            justify-content: end;
-        }
+    .header__item {
+        display: block;
+    }
+
+    .header__nav .header__item-mobile {
+        display: none;
+    }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 720px) {
+    :root {
+        --font-small: .877rem;
+        --font-medium: 1rem;
+        --font-big: 1.6rem;
+    
+        --icon: 4rem;
+    }
+
+    .section_characteristics {
+        flex-direction: row;
+        width: 95%;
+    }
+
+    .section__left {
+        height: 400px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .header__banner {
+        height: 500px;
+    }
+
     .section {
         flex-direction: row;
     }
 
     .section__left {
-        width: 60%;
-        padding: 15px 0;
-    }
-
-    .cards {
-        flex-direction: row;
+        width: 50%;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     .section__left {
-        width: 65%;
+        width: 60%;
     }
 }
+
+
+@media (min-width: 1400px) {
+    :root {
+        --font-small: .922rem;
+        --font-medium: 1.4rem;
+        --font-big: 2rem;
+    
+        --icon: 4rem;
+    }
+
+    .header__banner {
+        height: 600px;
+    }
+}
+
+
+
+
+/** Animations **/
 
 @keyframes move {
     0% {
@@ -314,23 +557,4 @@ hr {
     100% {
         transform: translate(400px);
     }
-}
-
-
-
-/** Animations **/
-@-webkit-keyframes header__nav {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes header__nav {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes header__nav {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
 }

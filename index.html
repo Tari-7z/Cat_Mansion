@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Mansion</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     
-
     <div class="container">
         <header class="header">
             <nav class="header__nav">
@@ -31,7 +31,7 @@
                     </li>
 
                     <li class="header__item">
-                        <a href="#" class="header__link premiun">   
+                        <a href="#" class="header__link header__link-gold">   
                             Premium
                         </a>
                     </li>
@@ -41,25 +41,58 @@
                             About Us
                         </a>
                     </li>
+
+                    <li class="header__item-mobile">
+                        <a href="#" class="header__link">
+                            <i class='bx bx-list-ul'></i>
+                        </a>
+                        
+                    </li>
                 </ul>
 
             </nav>
 
-            <nav class="header__miniNav">
+            <div class="header__lowerThird">
                 <p class="header__title">Meow productions</p>
-            </nav>
+            </div>
 
             <div class="header__banner">
                 <div class="background">
                     <h1 class="header__title">Bienvenido a Cat Mansion</h1>
                     <p class="header__paragraph">Cat Mansion es un servidor de Discord orientado a conseguir amigos, jugar y oir musica, en general pasarla bien.</p>
-                    <p>¡Unete ya!</p>
+                    <p class="header__paragraph header__paragraph-gold">¡Unete ya!</p>
                     <a href="#" class="cta-banner">Discord</a>
                 </div>
             </div>
+
         </header>
 
+        <h1 class="characteristics">Caracteristicas</h1>
+
+        <section class="section_characteristics">
+            
+            <div class="section__card">
+                <p class="section__title">Musica 24/7</p>
+                <i class='bx bxs-music'></i>
+            </div>
+
+            <div class="section__card">
+                <p class="section__title">Shitposts</p>
+                <i class='bx bx-happy-beaming'></i>
+            </div>
+
+            <div class="section__card">
+                <p class="section__title">Comunidad</p>
+                <i class='bx bx-group'></i>
+            </div>
+            
+        </section>
+
+
+        <h1></h1>
+
         <section class="section">
+
             <div class="section__left">
                 <img src="recursos/undraw_cat_epte.svg" alt="" class="section__img">
                 <h2>¿Que jugamos?</h2>
@@ -74,19 +107,21 @@
                     <li class="section__item">
                         Duck Game
                     </li>
+                    <li class="section__item">
+                        Gartic Phone
+                    </li>
                 </ul>
 
             </div>
-
+  
             <div class="section__right">
-                <iframe src="https://discord.com/widget?id=1043361954674253945&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                <iframe src="https://discord.com/widget?id=828414747463516180&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </div>
+
         </section>
         
 
-        <h1 class="cards__title">Opiniones</h1>
-        <hr>
-        <div class="cards">
+        <div class="card__list">                                             
 
             <div class="card">
                 <div class="card__photo">
@@ -95,7 +130,7 @@
                 <div class="card__text">
                     <h2>Tari#1111</h2>
                     <p>Cat Mansion es agradable</p>
-                </div>
+                </div>                                                                      
             </div>
             
             <div class="card">
@@ -117,7 +152,15 @@
                     <p>Cat Mansion es agradable</p>
                 </div>
             </div>     
+
+            
         </div>
+
+        <footer class="footer">
+            <p class="footer__title">Wof studios</p>
+        </footer>
+
+
     </div>
 </body>
 </html>
