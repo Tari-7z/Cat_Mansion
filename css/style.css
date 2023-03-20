@@ -86,10 +86,14 @@ body {
 .header__item .header__link {
     display: block;
     margin: 0 10px;
-    padding: 100% 4px;
+    padding: 100% 10px;
     font-family: var(--font-small);
     font-weight: 500;
     text-decoration: none;
+}
+
+.header__item-right {
+    margin-right: 30px;
 }
 
 .header__link-gold {
