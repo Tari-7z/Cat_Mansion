@@ -31,6 +31,7 @@ body {
     width:98%;
     margin: 0 auto;
     max-width: 1400px;
+    min-width: 350px;
 }
 
 
