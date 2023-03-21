@@ -507,6 +507,10 @@ body {
         width: 95%;
     }
 
+    .section_characteristics .section__card {
+        margin-bottom: 0px;
+    }
+
     .section__left {
         height: 400px;
     }
